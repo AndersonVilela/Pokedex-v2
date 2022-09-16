@@ -10,9 +10,9 @@ export const Container = styled.div`
   left: 45rem;
   box-sizing: border-box;
   border-radius: 50px;
-  border: 4px solid #393e46;
+  border: 4px solid /*#393e46*/ #4169E1;
   padding: 5px;
-  background: #222831;
+  background: /*#222831*/ #6A5ACD;
   transition: all 0.5s;
 
   display: flex;
@@ -85,4 +85,4 @@ export const IconRightArrow = styled(ArrowRightIcon)`
  &:hover {
    fill #393e46;
  }
-`;
+`
