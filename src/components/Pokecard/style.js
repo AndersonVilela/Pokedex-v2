@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 
-  width: 15rem;
-  height: 9rem;
+  width: 20rem;
+  height: 11rem;
   background: #4BCFB0;
 
   border: none;
@@ -55,7 +55,7 @@ export const TypePoke = styled.span`
   border: none;
   border-radius: 10px;
 
-  background: #3BA68D;
+  background: #fff;
 
   margin: 5px;
   width: 85px;

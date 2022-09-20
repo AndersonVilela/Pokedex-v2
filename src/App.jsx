@@ -18,16 +18,30 @@ function App() {
 
   function getPokemons() {
     let endpoints = [];
-    for (let i = 1; i <= 24; i++) {
+    for (let i = 1; i <= 50; i++) {
       endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`)
     }
     let response = axios.all(endpoints.map((endpoint) => axios.get(endpoint))).then((res) => setPokemons(res))
   }
 
 
+  function filterPokemon(name) {
+    let pokemonFiltered = [];
+    if (name === "") {
+      getPokemons();
+    }
+    for (let i in pokemons) {
+      if (pokemons[i].data.name.includes(name)) {
+        pokemonFiltered.push(pokemons[i])
+      }
+    }
+    setPokemons(pokemonFiltered)
+  }
+
+
   return (
     <div >
-      <Navbar />
+      <Navbar filterPokemon={filterPokemon} />
       <Grid>
         {pokemons.map((pokemon, key) => (
           <Pokecard name={pokemon.data.name} avatar={pokemon.data.name} key={key} types={pokemon.data.types} />

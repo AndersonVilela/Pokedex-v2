@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Container, IconMagnifyingGlass, SearchInput, IconRightArrow } from './styles.js';
 
-function Search() {
+function Search({ filterPokemon }) {
 
   const targetRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
@@ -20,7 +20,7 @@ function Search() {
       onBlur={() => setIsFocused(false)}
       hover={showSearchInput}
     >
-      <SearchInput ref={targetRef} showSearchInput={showSearchInput} />
+      <SearchInput onChange={(e) => (filterPokemon(e.target.value))} ref={targetRef} showSearchInput={showSearchInput} />
       {showSearchInput ? <IconRightArrow /> : <IconMagnifyingGlass />}
     </Container>
   );
