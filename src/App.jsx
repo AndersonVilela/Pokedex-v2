@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import Pokecard from './components/Pokecard';
@@ -11,14 +11,16 @@ import { Grid } from './components/Grid/Grid';
 function App() {
 
   const [pokemons, setPokemons] = useState([]);
+  const [currentPage, setCurrentPage] = React.useState(20);
 
   useEffect(() => {
     getPokemons();
-  }, [])
+    console.log(currentPage)
+  }, [currentPage])
 
   function getPokemons() {
     let endpoints = [];
-    for (let i = 1; i <= 50; i++) {
+    for (let i = 1; i <= currentPage; i++) {
       endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`)
     }
     let response = axios.all(endpoints.map((endpoint) => axios.get(endpoint))).then((res) => setPokemons(res))
@@ -38,6 +40,17 @@ function App() {
     setPokemons(pokemonFiltered)
   }
 
+  React.useEffect(() => {
+    const intersectionObserver = new IntersectionObserver((entries) => {
+      if (entries.some((entry) => entry.isIntersecting)) {
+        setCurrentPage((currentPageInsideState) => currentPageInsideState + 20)
+      }
+    });
+
+    intersectionObserver.observe(document.querySelector('#sentinela'));
+
+    return () => intersectionObserver.disconnect();
+  }, []);
 
   return (
     <div >
@@ -47,6 +60,7 @@ function App() {
           <Pokecard name={pokemon.data.name} avatar={pokemon.data.name} key={key} types={pokemon.data.types} />
         ))}
       </Grid>
+      <div id="sentinela"></div>
     </div>
   )
 }

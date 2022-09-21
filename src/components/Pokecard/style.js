@@ -4,7 +4,7 @@ export const Container = styled.div`
 
   width: 20rem;
   height: 11rem;
-  background: #4BCFB0;
+  background: /* #4BCFB0 */ /* #A9A9A9 */ #87CEEB;
 
   border: none;
   border-radius: 15px;
@@ -51,17 +51,12 @@ export const PokeName = styled.span`
   font-size: 20px;
 `;
 
-export const TypePoke = styled.span`
-  border: none;
-  border-radius: 10px;
-
-  background: #fff;
-
-  margin: 5px;
+export const TypePoke = styled.img`
   width: 85px;
   height: 30px;
+  padding: 3px;
+  border-radius: 10px;
+  margin: 3.5px 0;
 
-  font-size: 15px;
-  text-align: center;
 `;
 

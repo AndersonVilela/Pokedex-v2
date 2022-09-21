@@ -4,3 +4,9 @@
   margin: 0 auto;
   padding: 0;
 }
+
+#sentinela {
+  width: 100vw;
+  background-color: transparent;
+  height: 4rem;
+}

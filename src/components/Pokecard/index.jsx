@@ -1,133 +1,94 @@
 import { Container, PokeAvatar, PokeName, PokeType, SecLeft, SecRight, TypePoke } from "./style";
 import React from "react";
 
+import bug from '../../assets/pokemon-type-svg-icons/icons/bug.svg';
+import normal from '../../assets/pokemon-type-svg-icons/icons/normal.svg';
+import fire from '../../assets/pokemon-type-svg-icons/icons/fire.svg';
+import water from '../../assets/pokemon-type-svg-icons/icons/water.svg';
+import eletric from '../../assets/pokemon-type-svg-icons/icons/electric.svg';
+import grass from '../../assets/pokemon-type-svg-icons/icons/grass.svg';
+import ice from '../../assets/pokemon-type-svg-icons/icons/ice.svg';
+import fighting from '../../assets/pokemon-type-svg-icons/icons/fighting.svg';
+import poison from '../../assets/pokemon-type-svg-icons/icons/poison.svg';
+import ground from '../../assets/pokemon-type-svg-icons/icons/ground.svg';
+import flying from '../../assets/pokemon-type-svg-icons/icons/flying.svg';
+import rock from '../../assets/pokemon-type-svg-icons/icons/rock.svg';
+import ghost from '../../assets/pokemon-type-svg-icons/icons/ghost.svg';
+import dragon from '../../assets/pokemon-type-svg-icons/icons/dragon.svg';
+import dark from '../../assets/pokemon-type-svg-icons/icons/dark.svg';
+import stell from '../../assets/pokemon-type-svg-icons/icons/steel.svg';
+import fairy from '../../assets/pokemon-type-svg-icons/icons/fairy.svg';
+import psychic from '../../assets/pokemon-type-svg-icons/icons/psychic.svg';
 
 function Pokecard({ name, avatar, types }) {
 
-  const setColor1 = (num) => {
+  const setColor = (num) => {
     switch (types[num].type.name) {
 
       case 'bug':
-        return <TypePoke style={{ background: '#A6B91A' }}>{types[0].type.name}</TypePoke>
+        return <TypePoke src={bug} style={{ background: '#A6B91A' }} alt="type bug" />
 
       case 'dark':
-        return <TypePoke style={{ background: '#705746' }}>{types[0].type.name}</TypePoke>
+        return <TypePoke src={dark} style={{ background: '#705746' }} alt="type dark" />
 
       case 'dragon':
-        return <TypePoke style={{ background: '#6F35FC' }}>{types[0].type.name}</TypePoke>
+        return <TypePoke src={dragon} style={{ background: '#6F35FC' }} alt="type dragon" />
 
       case 'eletric':
-        return <TypePoke style={{ background: '#F7D02C' }}>{types[0].type.name}</TypePoke>
+        return <TypePoke src={eletric} style={{ background: '#F7D02C' }} alt="type eletric" />
 
       case 'fairy':
-        return <TypePoke style={{ background: '#D685AD' }}>{types[0].type.name}</TypePoke>
+        return <TypePoke src={fairy} style={{ background: '#D685AD' }} alt="type fairy" />
       case 'fighting':
-        return <TypePoke style={{ background: '#C22E28' }}>{types[0].type.name}</TypePoke>
+        return <TypePoke src={fighting} style={{ background: '#C22E28' }} alt="type fighting" />
 
       case 'fire':
-        return <TypePoke style={{ background: '#EE8130' }}>{types[0].type.name}</TypePoke>
+        return <TypePoke src={fire} style={{ background: '#EE8130' }} alt="type fire" />
 
       case 'flying':
-        return <TypePoke style={{ background: '#A98FF3' }}>{types[0].type.name}</TypePoke>
+        return <TypePoke src={flying} style={{ background: '#A98FF3' }} alt="type flying" />
 
       case 'ghost':
-        return <TypePoke style={{ background: '#735797' }}>{types[0].type.name}</TypePoke>
+        return <TypePoke src={ghost} style={{ background: '#735797' }} alt="type ghost" />
 
       case 'grass':
-        return <TypePoke style={{ background: '#7AC74C' }}>{types[0].type.name}</TypePoke>
+        return <TypePoke src={grass} style={{ background: '#7AC74C' }} alt="tyype grass" />
       case 'ground':
-        return <TypePoke style={{ background: '#E2BF65' }}>{types[0].type.name}</TypePoke>
+        return <TypePoke src={ground} style={{ background: '#E2BF65' }} alt="type ground" />
 
       case 'ice':
-        return <TypePoke style={{ background: '#96D9D6' }}>{types[0].type.name}</TypePoke>
+        return <TypePoke src={ice} style={{ background: '#96D9D6' }} alt="type ice" />
 
       case 'normal':
-        return <TypePoke style={{ background: '#A8A77A' }}>{types[0].type.name}</TypePoke>
+        return <TypePoke src={normal} style={{ background: '#A8A77A' }} alt="type normal" />
 
       case 'poison':
-        return <TypePoke style={{ background: '#A33EA1' }}>{types[0].type.name}</TypePoke>
+        return <TypePoke src={poison} style={{ background: '#A33EA1' }} alt="type poison" />
 
       case 'psychic':
-        return <TypePoke style={{ background: '#F95587' }}>{types[0].type.name}</TypePoke>
+        return <TypePoke src={psychic} style={{ background: '#F95587' }} alt="type psychic" />
       case 'rock':
-        return <TypePoke style={{ background: '#B6A136' }}>{types[0].type.name}</TypePoke>
+        return <TypePoke src={rock} style={{ background: '#B6A136' }} alt="type rock" />
 
       case 'stell':
-        return <TypePoke style={{ background: '#B7B7CE' }}>{types[0].type.name}</TypePoke>
+        return <TypePoke src={stell} style={{ background: '#B7B7CE' }} alt="type stell" />
 
       case 'water':
-        return <TypePoke style={{ background: '#6390F0' }}>{types[0].type.name}</TypePoke>
+        return <TypePoke src={water} style={{ background: '#6390F0' }} alt="type water" />
 
     }
   }
-  const setColor2 = (num) => {
-    switch (types[num].type.name) {
-
-      case 'bug':
-        return <TypePoke style={{ background: '#A6B91A' }}>{types[1].type.name}</TypePoke>
-
-      case 'dark':
-        return <TypePoke style={{ background: '#705746' }}>{types[1].type.name}</TypePoke>
-
-      case 'dragon':
-        return <TypePoke style={{ background: '#6F35FC' }}>{types[1].type.name}</TypePoke>
-
-      case 'eletric':
-        return <TypePoke style={{ background: '#F7D02C' }}>{types[1].type.name}</TypePoke>
-
-      case 'fairy':
-        return <TypePoke style={{ background: '#D685AD' }}>{types[1].type.name}</TypePoke>
-      case 'fighting':
-        return <TypePoke style={{ background: '#C22E28' }}>{types[1].type.name}</TypePoke>
-
-      case 'fire':
-        return <TypePoke style={{ background: '#EE8130' }}>{types[1].type.name}</TypePoke>
-
-      case 'flying':
-        return <TypePoke style={{ background: '#A98FF3' }}>{types[1].type.name}</TypePoke>
-
-      case 'ghost':
-        return <TypePoke style={{ background: '#735797' }}>{types[1].type.name}</TypePoke>
-
-      case 'grass':
-        return <TypePoke style={{ background: '#7AC74C' }}>{types[1].type.name}</TypePoke>
-      case 'ground':
-        return <TypePoke style={{ background: '#E2BF65' }}>{types[1].type.name}</TypePoke>
-
-      case 'ice':
-        return <TypePoke style={{ background: '#96D9D6' }}>{types[1].type.name}</TypePoke>
-
-      case 'normal':
-        return <TypePoke style={{ background: '#A8A77A' }}>{types[1].type.name}</TypePoke>
-
-      case 'poison':
-        return <TypePoke style={{ background: '#A33EA1' }}>{types[1].type.name}</TypePoke>
-
-      case 'psychic':
-        return <TypePoke style={{ background: '#F95587' }}>{types[1].type.name}</TypePoke>
-      case 'rock':
-        return <TypePoke style={{ background: '#B6A136' }}>{types[1].type.name}</TypePoke>
-
-      case 'stell':
-        return <TypePoke style={{ background: '#B7B7CE' }}>{types[1].type.name}</TypePoke>
-
-      case 'water':
-        return <TypePoke style={{ background: '#6390F0' }}>{types[1].type.name}</TypePoke>
-
-    }
-  }
-
 
   const setType = () => {
     if (types[1]) {
       return (
         <>
-          {setColor1(0)}
-          {setColor2(1)}
+          {setColor(0)}
+          {setColor(1)}
         </>
       )
     }
-    return setColor1(0)
+    return setColor(0)
   }
 
   return (
