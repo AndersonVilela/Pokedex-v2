@@ -1,24 +1,24 @@
 import { Container, PokeAvatar, PokeName, PokeType, SecLeft, SecRight, TypePoke } from "./style";
 import React from "react";
 
-import bug from '../../assets/pokemon-type-svg-icons/icons/bug.svg';
-import normal from '../../assets/pokemon-type-svg-icons/icons/normal.svg';
-import fire from '../../assets/pokemon-type-svg-icons/icons/fire.svg';
-import water from '../../assets/pokemon-type-svg-icons/icons/water.svg';
-import eletric from '../../assets/pokemon-type-svg-icons/icons/electric.svg';
-import grass from '../../assets/pokemon-type-svg-icons/icons/grass.svg';
-import ice from '../../assets/pokemon-type-svg-icons/icons/ice.svg';
-import fighting from '../../assets/pokemon-type-svg-icons/icons/fighting.svg';
-import poison from '../../assets/pokemon-type-svg-icons/icons/poison.svg';
-import ground from '../../assets/pokemon-type-svg-icons/icons/ground.svg';
-import flying from '../../assets/pokemon-type-svg-icons/icons/flying.svg';
-import rock from '../../assets/pokemon-type-svg-icons/icons/rock.svg';
-import ghost from '../../assets/pokemon-type-svg-icons/icons/ghost.svg';
-import dragon from '../../assets/pokemon-type-svg-icons/icons/dragon.svg';
-import dark from '../../assets/pokemon-type-svg-icons/icons/dark.svg';
-import stell from '../../assets/pokemon-type-svg-icons/icons/steel.svg';
-import fairy from '../../assets/pokemon-type-svg-icons/icons/fairy.svg';
-import psychic from '../../assets/pokemon-type-svg-icons/icons/psychic.svg';
+import bug from '../../assets/icons/bug.svg';
+import normal from '../../assets/icons/normal.svg';
+import fire from '../../assets/icons/fire.svg';
+import water from '../../assets/icons/water.svg';
+import eletric from '../../assets/icons/electric.svg';
+import grass from '../../assets/icons/grass.svg';
+import ice from '../../assets/icons/ice.svg';
+import fighting from '../../assets/icons/fighting.svg';
+import poison from '../../assets/icons/poison.svg';
+import ground from '../../assets/icons/ground.svg';
+import flying from '../../assets/icons/flying.svg';
+import rock from '../../assets/icons/rock.svg';
+import ghost from '../../assets/icons/ghost.svg';
+import dragon from '../../assets/icons/dragon.svg';
+import dark from '../../assets/icons/dark.svg';
+import stell from '../../assets/icons/steel.svg';
+import fairy from '../../assets/icons/fairy.svg';
+import psychic from '../../assets/icons/psychic.svg';
 
 function Pokecard({ name, avatar, types }) {
 
