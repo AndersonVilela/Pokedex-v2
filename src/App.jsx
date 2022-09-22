@@ -26,7 +26,6 @@ function App() {
     let response = axios.all(endpoints.map((endpoint) => axios.get(endpoint))).then((res) => setPokemons(res))
   }
 
-
   function filterPokemon(name) {
     let pokemonFiltered = [];
     if (name === "") {
